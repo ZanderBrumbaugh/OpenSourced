@@ -23,7 +23,7 @@ func main() {
     
     var timeInfo map[string]string = JSONDecode(stringResponse)
 
-    //Convert to number if you want to use arithmetically, indexing directly results in string
+    // Convert to number if you want to use arithmetically, indexing directly results in string
     unixTime, err := strconv.Atoi(timeInfo["unixtime"])
     logError(err)
 
