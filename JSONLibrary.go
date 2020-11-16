@@ -16,11 +16,10 @@ func main() {
     logError(err)
     contents, err := ioutil.ReadAll(response.Body)
     logError(err)
-    
-    var stringResponse string = string(contents)
-
+	
     defer response.Body.Close()
-    
+	
+    var stringResponse string = string(contents)    
     var timeInfo map[string]string = JSONDecode(stringResponse)
 
     // Convert to number if you want to use arithmetically, indexing directly results in string
