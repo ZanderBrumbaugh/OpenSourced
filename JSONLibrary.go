@@ -57,6 +57,7 @@ func JSONEncode(JSONInfo map[string]string) string {
     for index, value := range(JSONInfo) {
         JSONString += "\"" + index +  "\":\"" + value + "\","
     }
+	
     JSONString = JSONString[0:len(JSONString) - 1]
     JSONString += "}"
 
